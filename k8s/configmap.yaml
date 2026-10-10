@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: deployflow-config
+  namespace: deployflow
+data:
+  APP_NAME: "DeployFlow Task API"
+  APP_VERSION: "0.1.0"
+  DATABASE_URL: "postgresql+psycopg://deployflow_user:change_me_for_local_dev@deployflow-postgres:5432/deployflow"
