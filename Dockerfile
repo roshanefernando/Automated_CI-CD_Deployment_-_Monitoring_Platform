@@ -8,11 +8,10 @@ WORKDIR /app
 RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
 
 COPY pyproject.toml ./
+COPY app ./app
 
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir .
-
-COPY app ./app
 
 USER appuser
 
